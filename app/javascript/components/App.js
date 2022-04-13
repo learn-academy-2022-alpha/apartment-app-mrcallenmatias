@@ -19,13 +19,14 @@ class App extends Component {
     return (
       <Router>
         <Header />
+        <Navigation />
         <Switch>
           <Home exact path="/" component={Home}/>
-          <Index />
-          <Show />
-          <Edit />
-          <New />
-          <NotFound />
+          <Index path="/index" component={Index}/>
+          <Show path="/show" component={Show}/>
+          <Edit path="/edit" component={Edit}/>
+          <New path="/new" component={New}/>
+          <NotFound path="/notfound" component={NotFound}/>
         </Switch>
         <Footer />
       </Router>
