@@ -1,4 +1,13 @@
 import React, { Component } from "react"
+import Header from './components/Header'
+import Footer from './components/Footer'
+import Navigation from './components/Navigation'
+import Home from './pages/Home'
+import Index from './pages/Index'
+import Edit from './pages/Edit'
+import New from './pages/New'
+import NotFound from './pages/NotFound'
+import Show from './pages/Show'
 import {
   BrowserRouter as  Router,
   Route,
@@ -8,8 +17,18 @@ import {
 class App extends Component {
   render () {
     return (
-      <>
-      </>
+      <Router>
+        <Header />
+        <Switch>
+          <Home exact path="/" component={Home}/>
+          <Index />
+          <Show />
+          <Edit />
+          <New />
+          <NotFound />
+        </Switch>
+        <Footer />
+      </Router>
     )
   }
 }
